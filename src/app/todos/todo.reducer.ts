@@ -6,7 +6,7 @@ export const initialState: Todo[] = [];
 
 const _todoReducer = createReducer(
   initialState,
-  on(addTask, (state, {text}) => [...state, new Todo(text)]
+  on(addTask, (state, { text }) => [...state, new Todo(text)])
 );
 
 export function todoReducer(state, action) {
