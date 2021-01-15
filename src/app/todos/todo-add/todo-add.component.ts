@@ -24,6 +24,6 @@ export class TodoAddComponent implements OnInit {
     }
 
     this.store.dispatch(addTask({ text: this.txtInput.value }));
-    this.txtInput.reset;
+    this.txtInput.reset();
   }
 }

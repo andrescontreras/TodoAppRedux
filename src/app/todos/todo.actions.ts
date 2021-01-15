@@ -14,5 +14,15 @@ export const editTask = createAction(
   '[TODO] Edit Task',
   props<{ id: number; text: string }>()
 );
+
+export const deleteTask = createAction(
+  '[TODO] Delete Task',
+  props<{ id: number }>()
+);
+
+export const completeAllTask = createAction(
+  '[TODO] Complete All Task',
+  props<{ completed: boolean }>()
+);
 // export const decrement = createAction('[Counter Component] Decrement');
 // export const reset = createAction('[Counter Component] Reset')
