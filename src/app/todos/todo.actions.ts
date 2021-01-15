@@ -24,5 +24,7 @@ export const completeAllTask = createAction(
   '[TODO] Complete All Task',
   props<{ completed: boolean }>()
 );
+
+export const clearCompletedTasks = createAction('[TODO] Clear Completed Tasks');
 // export const decrement = createAction('[Counter Component] Decrement');
 // export const reset = createAction('[Counter Component] Reset')

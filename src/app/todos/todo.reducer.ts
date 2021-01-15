@@ -2,6 +2,7 @@ import { createReducer, on } from '@ngrx/store';
 import { Todo } from './models/todo.model';
 import {
   addTask,
+  clearCompletedTasks,
   completeAllTask,
   deleteTask,
   editTask,
@@ -50,6 +51,9 @@ const _todoReducer = createReducer(
         finished: completed,
       };
     });
+  }),
+  on(clearCompletedTasks, (state) => {
+    return state.filter((todo) => !todo.finished);
   })
 );
 
